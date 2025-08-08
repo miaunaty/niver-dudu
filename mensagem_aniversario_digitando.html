@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Aniversário ❤</title>
+<style>
+    body {
+        background-color: #fff0f6;
+        font-family: Arial, sans-serif;
+        color: #d63384;
+        text-align: center;
+        padding: 50px;
+    }
+    #mensagem {
+        font-size: 1.4em;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        display: inline-block;
+        text-align: left;
+    }
+    #coracao {
+        color: red;
+        font-size: 1.8em;
+        display: inline-block;
+        animation: piscar 1s infinite;
+    }
+    @keyframes piscar {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<h1><span id="coracao">❤</span> Feliz Aniversário! <span id="coracao">❤</span></h1>
+<div id="mensagem"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const texto = "feliz aniversário meu amor, eu te amo muito, mais que você. você é tudo para mim, sou grata a Deus pela sua vida,e vou estar para sempre do seu lado te apoiando pois você é minha maior inspiração, amo amar você!! beijão eu te amo , mais que sim sim !!";
+    const elemento = document.getElementById("mensagem");
+    let i = 0;
+
+    function digitar() {
+        if (i < texto.length) {
+            elemento.textContent += texto.charAt(i);
+            i++;
+            setTimeout(digitar, 50); // Velocidade da digitação
+        }
+    }
+
+    digitar();
+});
+</script>
+
+</body>
+</html>
